@@ -1,3 +1,28 @@
+/**
+ * Cell class represents a single cell in the Tic Tac Toe grid
+ */
+function Cell() {
+	let value = null;
+
+	const addMark = (player) => {
+		value = player;
+	};
+
+	const getValue = () => value;
+	const reset = () => {
+		value = null;
+	};
+
+	return {
+		addMark,
+		getValue,
+		reset,
+	};
+}
+
+/**
+ * GameBoard class manages the game board state
+ */
 function GameBoard() {
 	// const board = [];
 	// const rows = 3;
@@ -28,25 +53,9 @@ function GameBoard() {
 	return { getBoard, placeMark };
 }
 
-function Cell() {
-	let value = null;
-
-	const addMark = (player) => {
-		value = player;
-	};
-
-	const getValue = () => value;
-	const reset = () => {
-		value = null;
-	};
-
-	return {
-		addMark,
-		getValue,
-		reset,
-	};
-}
-
+/**
+ * GameController class manages the game logic
+ */
 function GameController(playerOneName = "X", playerTwoName = "O") {
 	const board = GameBoard();
 	const players = [
@@ -177,6 +186,8 @@ function GameController(playerOneName = "X", playerTwoName = "O") {
 	// }; [first method]
 
 	let winningCells = [];
+
+	// Define winning combinations
 	const winningCombos = [
 		[
 			[0, 0],
@@ -284,9 +295,13 @@ function GameController(playerOneName = "X", playerTwoName = "O") {
 	};
 }
 
+/**
+ * DisplayController class manages the UI using arrow functions for methods
+ */
 (function DisplayController() {
-	const getUserName = prompt("Please enter your username", "").trim();
-	const playerName = getUserName ? getUserName : "X";
+	const userInput = prompt("Please enter your username", "");
+	const playerName =
+		userInput !== null && userInput.trim() !== "" ? userInput.trim() : "X";
 	const game = GameController(playerName);
 	const boardContainer = document.querySelector(".board");
 	const headingTitle = document.querySelector(".turn");
