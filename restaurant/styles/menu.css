@@ -1,0 +1,106 @@
+/* stylelint-disable selector-class-pattern */
+
+.menu {
+  padding: 3rem 0;
+}
+
+.menu__category {
+  margin-bottom: 3rem;
+}
+
+.menu__category-title {
+  color: #8b4513;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.menu__item {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
+  transition: transform 0.3s;
+}
+
+.menu__item:hover {
+  transform: translateY(-5px);
+}
+
+.menu__item-image {
+  height: 200px;
+  background-color: #deb887;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu__item-content {
+  padding: 1.5rem;
+}
+
+.menu__item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.menu__item-title {
+  color: #5d4037;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.menu__item-price {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.menu__item-description {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.menu__dietary-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.menu__dietary-tag {
+  background-color: #f5f5dc;
+  color: #8b4513;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+@media (width <= 768px) {
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-banner__title {
+    font-size: 2rem;
+  }
+}
+
+@media (width <= 480px) {
+  .menu__category-title {
+    font-size: 1.5rem;
+  }
+
+  .menu__item-header {
+    flex-direction: column;
+  }
+
+  .menu__item-price {
+    margin-top: 0.25rem;
+  }
+}

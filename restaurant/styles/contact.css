@@ -1,0 +1,136 @@
+/* stylelint-disable selector-class-pattern */
+.contact {
+  padding: 4rem 0;
+}
+
+.contact__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact__info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact__info-item {
+  margin-bottom: 2rem;
+}
+
+.contact__info-title {
+  color: #8b4513;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.contact__info-text {
+  color: var(--text-light);
+}
+
+.contact__hours-list {
+  list-style: none;
+}
+
+.contact__hours-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #deb887;
+}
+
+.contact__map {
+  margin-top: 2rem;
+  height: 300px;
+  background-color: #e6e6fa;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  text-align: center;
+  border: 1px solid #deb887;
+}
+
+/* Contact form - BEM: contact__form element */
+.contact__form {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--light-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+}
+
+.contact__form-title {
+  color: #8b4513;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact__form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #5d4037;
+}
+
+.contact__form-input,
+.contact__form-textarea,
+.contact__form-select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #deb887;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact__form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact__form-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--light-bg);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact__form-button:hover {
+  background-color: #a0522d;
+}
+
+/* Responsive adjustments */
+@media (width <= 768px) {
+  .contact__container {
+    flex-direction: column;
+  }
+
+  .page-banner__title {
+    font-size: 2rem;
+  }
+}
+
+@media (width <= 480px) {
+  .contact__hours-item {
+    flex-direction: column;
+    padding-bottom: 0.75rem;
+  }
+
+  .contact__form {
+    padding: 1.5rem;
+  }
+}
