@@ -54,7 +54,6 @@
   border: 1px solid #deb887;
 }
 
-/* Contact form - BEM: contact__form element */
 .contact__form {
   flex: 1;
   min-width: 300px;
@@ -113,7 +112,6 @@
   background-color: #a0522d;
 }
 
-/* Responsive adjustments */
 @media (width <= 768px) {
   .contact__container {
     flex-direction: column;
